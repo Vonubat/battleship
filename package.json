@@ -1,21 +1,45 @@
 {
-    "name": "ws_task",
+    "name": "battleship",
     "version": "1.0.0",
-    "description": "Template for the WebSocket remote control task",
+    "description": "Battleship game backend using websocket",
     "main": "index.js",
     "type": "module",
+    "engines": {
+        "node": ">=20.0.0"
+    },
     "scripts": {
-        "start": "node ./index.js",
-        "start:dev": "nodemon ./index.js",
+        "start": "tsx ./index.ts",
+        "start:dev": "tsx watch ./index.ts",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
-    "author": "Andrei Auchynnikau",
-    "keywords": [],
-    "license": "ISC",
-    "devDependencies": {
-        "nodemon": "^2.0.16"
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Vonubat/battleship.git"
     },
+    "authors": [
+        "Andrei Auchynnikau",
+        "Vonubat <vonubat@gmail.com>"
+    ],
+    "keywords": [
+        "nodejs",
+        "websocket",
+        "battleship"
+    ],
+    "license": "ISC",
     "dependencies": {
+        "dotenv": "^16.4.5",
         "ws": "^8.8.0"
+    },
+    "devDependencies": {
+        "@types/node": "^20.11.20",
+        "@types/ws": "^8.5.10",
+        "@typescript-eslint/eslint-plugin": "^7.0.2",
+        "@typescript-eslint/parser": "^7.0.2",
+        "cross-env": "^7.0.3",
+        "eslint": "^8.57.0",
+        "eslint-config-prettier": "^9.1.0",
+        "prettier": "^3.2.5",
+        "tsx": "^4.7.1",
+        "typescript": "^5.3.3"
     }
 }
